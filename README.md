@@ -1,17 +1,17 @@
-# Questions-for-Django-Trainee-at-Accuknox
+# Accuknox Django Trainee Assignment
 
-Not every answer is memorized by me but you should know that what reference i had used to answer them. I used Code with Harry ultimate python course last videos may be #97 or #96 to answer your questions.
+## Topic: Django Signals
 
-Topic: Django Signals
+**Q1 — Synchronous execution** (`Answer1/`)
+Proves signals block the caller. Run: `python manage.py test_sync_signal`
 
-Question 1: By default are django signals executed synchronously or asynchronously? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic.
+**Q2 — Same thread as caller** (`Answer2/`)
+Proves signal runs in MainThread. Run: `python manage.py test_thread_signal`
 
-Question 2: Do django signals run in the same thread as the caller? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic.
+**Q3 — Same database transaction** (`Answer3/`)
+Proves signal rolls back with the caller's transaction. Run: `python manage.py test_transaction_signal`
 
-Question 3: By default do django signals run in the same database transaction as the caller? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic.
+## Topic: Custom Classes in Python
 
-Topic: Custom Classes in Python
-
-Description: You are tasked with creating a Rectangle class with the following requirements:
-
-An instance of the Rectangle class requires length:int and width:int to be initialized. We can iterate over an instance of the Rectangle class When an instance of the Rectangle class is iterated over, we first get its length in the format: {'length': <VALUE_OF_LENGTH>} followed by the width {width: <VALUE_OF_WIDTH>}
+**Rectangle class** (`Class/code2.py`)
+Implements `__iter__` returning `{'length': ...}` then `{'width': ...}`.
